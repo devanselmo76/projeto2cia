@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>2 Cia - Prudente</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="header-link">
+            <img src="./assets/asa-pmrv.png" width="200px" alt="">
+            <ul>
+                <li><a href="http://www.intranet.policiamilitar.sp.gov.br" target="_blank">Intranet</a></li>
+                <li><a href="https://correio.policiamilitar.sp.gov.br/iwaredir.nsf" target="_blank">Login iNotes</a>
+                </li>
+                <li><a href="http://10.61.15.39/" target="_blank">PPRI</a></li>
+                <li><a href="http://orion.intranet.policiamilitar.sp.gov.br/" target="_blank">Agendamento UIS</a></li>
+                <li><a href="http://sistemasadmin.intranet.policiamilitar.sp.gov.br/EAD.pmesp/" target="_blank">EAD PMESP</a></li>
+                <li><a href="#" id="abrir-login"> 🔐 Serviços ao PM</a></li>
+            </ul>
+        </nav>
+    </header>
+    <H1 class="text">2ª CIA - PRESIDENTE PRUDENTE/SP</H1>
+    <H1 class="text-black">black</H1>
+
+    <section>
+        <div class="anuncio">
+            <div class="video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="./assets/institucional.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    ▶ Assistir com som
+                </div>
+            </div>
+            <p>Vídeo Institucional</p>
+        </div>
+    </section>
+
+    <div class="slider-container">
+        <button class="prev">&#10094;</button>
+
+        <div class="slider">
+            <div class="slider-track">
+                <div class="slide">
+                    <img src="./assets/equ tor.jpeg">
+                </div>
+                <div class="slide">
+                    <img src="./assets/tor.jpeg">
+                </div>
+                <div class="slide">
+                    <img src="./assets/droga.jpeg">
+                </div><div class="slide">
+                    <img src="./assets/principal.jpeg">
+                </div><div class="slide">
+                    <img src="./assets/tonelada.jpeg">
+                </div>                
+            </div>
+        </div>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <!-- 🔐 MODAL LOGIN -->
+    <div class="modal" id="modal-login">
+        <div class="modal-box">
+            <h2>Login PM</h2>
+
+            <input type="text" id="user" placeholder="Login: admin">
+            <input type="password" id="senha" placeholder="Senha: admin">
+
+            <button onclick="login()">Entrar</button>
+            <p id="erro"></p>
+
+            <span class="fechar" id="fechar">&times;</span>
+        </div>
+    </div>
+    <br>
+    <H1 class="text-2">ÚLTIMAS NOTÍCIAS</H1>
+    <br>
+    <p class="noticias">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, velit animi facere delectus optio sed nulla nostrum quos quia consequuntur accusamus tenetur quisquam esse expedita labore quae, earum architecto provident?</p>
+    <P class="noticias">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, voluptatem dolorum. Praesentium accusamus totam excepturi! Delectus maxime nemo corrupti, aliquid eaque vero maiores voluptatum similique. Accusamus odio recusandae reiciendis error!</P>
+    <br>
+    <section class="grid1">
+        <div>
+            <img src="./assets/principal.jpeg" alt="asa">
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde blanditiis vitae quam nobis minima, officiis earum explicabo dolor delectus eveniet tempore assumenda odio voluptates quibusdam vel quod, quae aspernatur necessitatibus.</p>
+        </div>
+        <div>
+            <img src="./assets/tonelada.jpeg" alt="asa">
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem delectus nostrum dolore laborum eum quo similique id facere! Enim odit quos laudantium rerum culpa provident corporis asperiores quia quod!</p>
+        </div>
+        <div>
+            <img src="./assets/droga.jpeg" alt="asa">
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum rerum pariatur iure eligendi nemo officia recusandae culpa obcaecati? Ut libero neque similique facilis repellat? Nemo aut officia vitae fuga nam.</p>
+        </div>
+
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <br>
+               <h4>2ª Cia - Prudente</h4> 
+                <br>               
+                <p>Policiamento Rodoviário</p>                
+                <div class="footer-links">
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#servicos">Eletrônicos</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#">📷</a><a href="#">👍</a><a href="#">📱</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rodoviário. Todos os direitos reservados.</p>
+                <p>Dev. Anselmo_Rodrigo</p>
+                <p><a href="#privacidade">Política de Privacidade</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cripts.js"></script>
+</body>
+
+</html>

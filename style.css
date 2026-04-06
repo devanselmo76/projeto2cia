@@ -1,0 +1,451 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REMOVE SCROLL LATERAL */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* PADRÃO GLOBAL */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #666;
+
+    background-image: url('./assets/rodoviario.jpeg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CAMADA TRANSPARENTE */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+}
+
+/* IMAGENS E VIDEO */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HEADER */
+.container {
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #666;
+}
+
+.header-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-link ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.header-link a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.header-link a:hover {
+    color: #00aa55;
+}
+
+/* TITULOS */
+.text {
+    background: yellow;
+    text-align: center;
+    padding: 10px;
+}
+
+.text-2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.text-black {
+    background: black;
+}
+
+/* VIDEO */
+.anuncio {
+    width: 100%;
+}
+
+.video-container {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* SLIDER */
+.slider-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: calc(100% / 3);
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+/*.slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}*/
+
+/*.slide img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}*/
+
+/*.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #000;
+}*/
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* BOTÕES SLIDER */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background: #00aa55;
+}
+
+/* GRID NOTICIAS */
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+.grid1 div {
+    text-align: center;
+}
+
+.grid1 img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* REMOVE CONFIG ANTIGA QUE QUEBRAVA */
+.grid1>div:nth-child(n+4) {
+    display: block;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.modal-box button {
+    width: 100%;
+    padding: 10px;
+    background: #0a3d2e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-box button:hover {
+    background: #145c43;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* --- INFORMAÇÃO --- */
+.noticias {
+    max-width: 800px; /* Largura ideal para leitura (entre 60-80 caracteres por linha) */
+    margin: 0 auto; /* Centraliza o bloco de texto na página */
+    padding: 0 20px; /* Evita que o texto encoste nas bordas em telas pequenas */
+    text-align: left; /* Mantém o texto alinhado à esquerda (mais fácil de ler) */
+    line-height: 1.6; /* Espaçamento entre linhas confortável */
+    hyphens: auto;        /* Adiciona hífens para quebrar palavras longas (essencial!) */
+    text-justify: inter-word; /* Melhora o espaçamento entre as palavras */
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background: #050505;
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.footer-content h4 {
+    color: yellow;
+}
+
+.footer-content p {
+    color: yellow;
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+    color: yellow;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social a {
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: var(--white);
+}
+
+.privacidade {
+    background: #000;
+    padding: 40px 0;
+}
+
+.privacidade h3 {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.privacidade p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+
+/* TABLET */
+@media (max-width: 900px) {
+    .header-link {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-link ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide {
+        width: calc(100% / 2);
+    }
+
+    .grid1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-container {
+        height: 50vh;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* CELULAR */
+/*@media (max-width: 600px) {
+    .slide {
+        width: 100%;
+    }
+
+    .grid1 {
+        grid-template-columns: 1fr;
+    }
+
+    .video-container {
+        height: 40vh;
+    }
+}*/
+
+@media (max-width: 600px) {
+
+    .header-link {
+        flex-direction: row;
+        /* 🔥 volta pra linha */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header-link img {
+        width: 100px;
+        /* reduz a asa */
+    }
+
+    .header-link ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        /* quebra se não couber */
+        justify-content: flex-end;
+    }
+
+    .header-link a {
+        font-size: 12px;
+        /* evita estourar */
+    }
+}

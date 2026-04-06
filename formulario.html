@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <title>Formulário-Cia</title>
+</head>
+
+<body>
+    <button class="btn-inicio" onclick="logout()">Início</button>
+    <form class="formulario">
+        <h1>Plano de Chamada</h1>
+        <input type="text" placeholder="Nome" required>
+        <input type="text" placeholder="RE" required>
+        <button type="submit">Enviar</button>
+
+    <script>
+        if (localStorage.getItem("logado") !== "true") {
+            window.location.href = "index.html";
+        }
+
+        function logout() {
+            localStorage.removeItem("logado");
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <p id="subtitulo">Complete suas informações</p>
+    </div>
+    <fieldset class="grupo">
+        <div class="campo">
+            <label for="nome"><strong>Nome</strong>:</label>
+            <input type="text" name="nome" id="nome" required>
+        </div>
+        <div class="campo">
+            <label for="re"><strong>RE:</strong></label>
+            <input type="text" name="re" id="re" required>
+        </div>
+        <div class="campo">
+            <label for="postograduacao"><strong>Posto / Graduação:</strong></label>
+            <select id="postoGraduacao" required>
+                <option selected disabled value="">Selecione</option>
+                <option>CAPITÃO PM</option>
+                <option>1º TENENTE PM</option>
+                <option>2º TENENTE PM</option>
+                <option>SUBTENENTE PM</option>
+                <option>1º SGT PM</option>
+                <option>2º SGT PM</option>
+                <option>3º SGT PM</option>
+                <option>CB PM</option>
+                <option>SD PM</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <div class="campo">
+        <label for="email"><strong>Email Funcional:</strong></label>
+        <input type="email" name="email" id="email">
+    </div>
+
+    <div class="campo">
+        <label for="unidade"><strong>Selecione sua unidade!</strong></label>
+        <input type="radio" name="unidade" value="Sede de Cia" checked> Sede de Cia
+        <label>
+            <input type="radio" name="unidade" value="1º Pelotão"> 1º Pelotão
+        </label>
+        <label>
+            <input type="radio" name="unidade" value="2º Pelotão"> 2º Pelotão
+        </label>
+        <label>
+            <input type="radio" name="unidade" value="3º Pelotão"> 3º Pelotão
+        </label>
+    </div>
+
+    <br>
+
+    <fieldset class="grupo">
+        <div class="campo">
+            <label><strong>Endereço:</strong></label>
+            <input type="text" name="endereco" id="endereco">
+        </div>
+        <div class="campo">
+            <label><strong>Bairro:</strong></label>
+            <input type="text" name="bairro" id="bairro">
+        </div>
+        <div class="campo">
+            <label><strong>Cidade:</strong></label>
+            <input type="text" name="cidade" id="cidade">
+        </div>
+        <div class="campo">
+            <label><strong>Complemento / Referência:</strong></label>
+            <input type="text" name="referencia" id="referencia">
+        </div>
+        <div class="campo">
+            <label><strong>Telefone de contato:</strong></label>
+            <input type="text" name="telefone" id="telefone">
+        </div>
+    </fieldset>
+    <br>
+    <button class="btn" type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
