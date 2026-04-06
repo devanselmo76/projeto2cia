@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* --- TEXTO PRINCIPAL ---*/
+h1 {
+    color: #666;
+}
+
 /* REMOVE SCROLL LATERAL */
 html,
 body {
